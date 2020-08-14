@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="cadastro/src/main/java"/>
+	<classpathentry kind="src" path="cadastro/src/test/java"/>
+	<classpathentry kind="src" path="marketplace/src/main/java"/>
+	<classpathentry kind="src" path="marketplace/src/test/java"/>
+	<classpathentry kind="src" path="pedido/src/main/java"/>
+	<classpathentry kind="src" path="pedido/src/test/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
+		<attributes>
+			<attribute name="module" value="true"/>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
