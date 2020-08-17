@@ -27,6 +27,9 @@ import com.github.caiquecamargo.ifood.cadastro.dto.RestauranteDTO;
 import com.github.caiquecamargo.ifood.cadastro.dto.RestauranteMapper;
 import com.github.caiquecamargo.ifood.cadastro.infra.ConstraintViolationResponse;
 
+import org.eclipse.microprofile.metrics.annotation.Counted;
+import org.eclipse.microprofile.metrics.annotation.SimplyTimed;
+import org.eclipse.microprofile.metrics.annotation.Timed;
 import org.eclipse.microprofile.openapi.annotations.enums.SecuritySchemeType;
 import org.eclipse.microprofile.openapi.annotations.media.Content;
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
@@ -48,6 +51,9 @@ public class ResturanteResource {
   RestauranteMapper restauranteMapper;
 
   @GET
+  @Counted(name = "Quantidade de buscas em restaurantes")
+  @SimplyTimed(name = "Tempo de busca em restaurantes")
+  @Timed(name = "Tempo completo de busca")
   public List<RestauranteDTO> buscar() {
     Stream<Restaurante> restaurantes = Restaurante.streamAll();
     return restaurantes.map(r -> restauranteMapper.toRestauranteDTO(r)).collect(Collectors.toList());
