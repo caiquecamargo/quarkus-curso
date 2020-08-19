@@ -4,6 +4,7 @@
 .classpath
 .settings/
 bin/
+ifood/bin
 
 # IntelliJ
 .idea
