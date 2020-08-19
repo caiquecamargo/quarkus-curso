@@ -4,6 +4,6 @@ public class PratoCarrinho {
 
   public String usuario;
 
-  public Long prato;
+  public String prato;
 
 }
